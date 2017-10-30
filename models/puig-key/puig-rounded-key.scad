@@ -36,7 +36,7 @@ translate([xdim-rdim,ydim-rdim,zdim-rdim])sphere(r=rdim);
 
 $LONG = 45;
 $WIDTH = 15;
-$HEIGHT = 2;
+$HEIGHT = 3;
 
 $SMALL_LONG = 16;
 $SMALL_WIDTH = 26;
@@ -57,7 +57,7 @@ union() {
 	roundedcube($LONG,$WIDTH,$HEIGHT,1);
 
 	// line
-	translate([-(($LONG - 11) / 2), -$MINILINE_WIDTH / 2, 0])
+	translate([-(($LONG - 12) / 2), -$MINILINE_WIDTH / 2, 0])
 	//cube([$LONG - 3, $MINILINE_WIDTH, $HEIGHT + 2], center = true);
 
 	roundedcube($LONG - 3, $MINILINE_WIDTH, $HEIGHT,1);
@@ -65,7 +65,7 @@ union() {
 	// miniline
 	
 	//translate([-24, -$MINILINE_WIDTH / 2, 0])
-translate([-$LONG/2,-$MINILINE_WIDTH/2,0])
+translate([(-$LONG/2)+1,-$MINILINE_WIDTH/2,0])
 	roundedcube(4, $MINILINE_WIDTH, $HEIGHT,1);
 
 
