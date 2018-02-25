@@ -36,17 +36,19 @@ difference() {
 
 module nail() {
 // Tornillo
-translate([0,0,$HEIGHT_BOTTOM+$HEIGHT_TOP-$HEIGHT_NAIL]) { cylinder(r=$DIAMETER_NAIL/2, h=$HEIGHT_NAIL); }
-
-
-translate([0,0,$HEIGHT_BOTTOM+$HEIGHT_TOP-10])  {
-    // combining both relatively complex shapes can be created
-    color("gray")
-    
-        linear_extrude(height = 20, twist = -360*3, scale = 1, center = true, slices = 200)
-            square([12, 12], center = true);
+translate([0,0,$HEIGHT_BOTTOM+$HEIGHT_TOP-$HEIGHT_NAIL]) { 
+    difference() {
+    cylinder(r=$DIAMETER_NAIL/2-1, h=$HEIGHT_NAIL); 
+     cylinder(r=$DIAMETER_NAIL/2/2, h=$HEIGHT_NAIL); 
     }
+    
+    
+    import("thread12x8.stl");    
+    
+    }
+
 }
+
 
 
 difference() {
