@@ -1,6 +1,5 @@
 module base(){
        difference(){ 
-
             square([65,20]);
             
             translate([3,10])
@@ -20,8 +19,9 @@ module ada(){
             scale([1.0,1.0])
             text("Ada");
             
-            translate([62.8,59])   
-            scale([0.47,0.47,0.1])    
+            translate([40,1])   
+            scale([0.1125,0.1125,0.1])  
+            
             import("ada.dxf");
         }
         translate([64,6.5])
@@ -30,16 +30,10 @@ module ada(){
         text("ADA");
     }   
     
+    // fondo figura
+    translate([40,0,0])
+    cube([20,20,0.25]);
 }
 
-translate([-30,-45]){
-    turing();
-    translate([0,22])
-    stallman();
-    translate([0,44])
-    torvalds();
-    translate([0,66])
-    ada();
-    translate([0,88])
-    darwin();
-}
+scale([1,1,2])
+ada();

@@ -1,14 +1,13 @@
 module base(){
-       difference(){ 
-
-            square([65,20]);
-            
-            translate([3,10])
-            circle([10], $fn=100);
-            
-            translate([60,1])
-            square([4,18]);
-       }
+   difference(){ 
+        square([65,20]);
+        
+        translate([3,10])
+        circle([10], $fn=100);
+        
+        translate([60,1])
+        square([4,18]);
+   }
 }
 
 module turing(){
@@ -20,8 +19,8 @@ module turing(){
             scale([0.9,0.9])
             text("Turing");
             
-            translate([30.8,40])   
-            scale([0.3,0.3,0.1])    
+            translate([41,1])   
+            scale([0.125,0.125,0.1])    
             import("turing.dxf");
         }
         translate([64.1,2.2])
@@ -29,16 +28,12 @@ module turing(){
         scale([0.30,0.44])
         text("TURING");
     }
+    
+    // fondo figura
+    translate([40,0,0])
+    cube([20,20,0.25]);
 }
 
-translate([-30,-45]){
-    turing();
-    translate([0,22])
-    stallman();
-    translate([0,44])
-    torvalds();
-    translate([0,66])
-    ada();
-    translate([0,88])
-    darwin();
-}
+
+scale([1,1,2])
+turing();

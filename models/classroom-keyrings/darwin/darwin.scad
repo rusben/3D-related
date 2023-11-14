@@ -12,6 +12,10 @@ module base(){
 }
 
 module darwin(){
+    // fondo figura
+    translate([40,0,0])
+    cube([20,20,0.25]);
+    
     linear_extrude(1){
         difference(){ 
             base();
@@ -19,8 +23,8 @@ module darwin(){
             scale([0.85,0.85])
             text("Darwin");
             
-            translate([62.4,42.8])   
-            scale([0.32,0.32,0.1])    
+            translate([41,1])   
+            scale([0.0875,0.0875,0.1])    
             import("darwin.dxf");
         }
         translate([64,3.4])
@@ -30,14 +34,16 @@ module darwin(){
     }   
 }
 
-translate([-30,-45]){
-    turing();
-    translate([0,22])
-    stallman();
-    translate([0,44])
-    torvalds();
-    translate([0,66])
-    ada();
-    translate([0,88])
+//translate([-30,-45]){
+//    turing();
+//    translate([0,22])
+//    stallman();
+//    translate([0,44])
+//    torvalds();
+//    translate([0,66])
+//    ada();
+//    translate([0,88])
+    
+    scale([1, 1, 2])
     darwin();
-}
+//}

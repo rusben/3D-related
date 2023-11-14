@@ -10,29 +10,29 @@ module base(){
    }
 }
 
-module stallman(){
+module assange(){
     linear_extrude(1){
         difference(){ 
             base();
             
             translate([5,6])
             scale([0.7,0.7])
-            text("Stallman");
-                       
-            translate([41.5,0.75])
+            text("Assange");
+            
+            translate([44,1])  
             scale([0.09,0.09,0.1])    
-            import("stallman.dxf");
+            import("assange.dxf");
         }
-        
-        translate([64,1.3])
+        translate([64.1,1.9])
         rotate(90)
-        scale([0.24,0.42])
-        text("STALLMAN");
-    } 
- 
-    translate([43, 0, 0])
-    cube([16,20,0.25]);       
+        scale([0.25,0.44])
+        text("ASSANGE");
+    }
+
+    // fondo figura
+    translate([42,0,0])
+    cube([18,20,0.25]);
 }
 
 scale([1,1,2])
-stallman();
+assange();
