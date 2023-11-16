@@ -11,6 +11,12 @@ module base(){
 }
 
 module torvalds(){
+        // fondo figura
+    //translate([40,0,0])
+    //cube([20,20,0.25]);
+        
+    translate([40,0,0]) { cube([20,20,0.25 ]); }
+                
     linear_extrude(1){
         difference(){ 
             base();
@@ -28,10 +34,6 @@ module torvalds(){
         scale([0.24,0.42])
         text("TORVALDS");
     }   
-        
-    // fondo figura
-    translate([40,0,0])
-    cube([20,20,0.25]);
 }
 
 scale([1,1,2])

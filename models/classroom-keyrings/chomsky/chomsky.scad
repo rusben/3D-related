@@ -11,7 +11,7 @@ module base(){
        }
 }
 module chomsky(){
-            translate([45,0,0]) { cube([15,20,0.5 ]); }
+   //         translate([45,0,0]) { cube([15,20,0.5 ]); }
 
     linear_extrude(2){
         difference(){ 

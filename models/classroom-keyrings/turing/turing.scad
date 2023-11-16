@@ -19,8 +19,8 @@ module turing(){
             scale([0.9,0.9])
             text("Turing");
             
-            translate([41,1])   
-            scale([0.125,0.125,0.1])    
+            translate([42,1])   
+            scale([0.105,0.105,0.1])    
             import("turing.dxf");
         }
         translate([64.1,2.2])
@@ -29,11 +29,14 @@ module turing(){
         text("TURING");
     }
     
-    // fondo figura
-    translate([40,0,0])
-    cube([20,20,0.25]);
+    
 }
 
 
 scale([1,1,2])
 turing();
+
+// fondo figura
+translate([40,0,0])
+cube([20,20,0.25]);
+//import("turing.stl");
